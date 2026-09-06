@@ -770,6 +770,80 @@ footer{
 
 }
 
+.menu-btn{
+    display:none;
+    background:none;
+    border:none;
+    font-size:1.7rem;
+    cursor:pointer;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.mobile-btn{
+    display:none;
+}
+
+@media(max-width:768px){
+
+    nav{
+
+        position:relative;
+        padding:20px 0;
+
+    }
+
+    .menu-btn{
+
+        display:block;
+
+    }
+
+    .desktop-btn{
+
+        display:none;
+
+    }
+
+    .nav-links{
+
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:white;
+        box-shadow:0 10px 20px rgba(0,0,0,.08);
+        padding:25px;
+        gap:20px;
+        border-radius:0 0 15px 15px;
+
+    }
+
+    .nav-links.active{
+
+        display:flex;
+
+    }
+
+    .mobile-btn{
+
+        display:inline-block;
+        background:#2563eb;
+        color:white;
+        padding:12px 18px;
+        border-radius:8px;
+        text-decoration:none;
+
+    }
+
+}
+
 @media (max-width:600px){
 
     section{

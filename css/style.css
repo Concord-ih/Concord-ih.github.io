@@ -819,3 +819,54 @@ footer{
     }
 
 }
+
+
+
+
+
+/* Dark Mode */
+
+.dark-mode{
+
+    background:#020617;
+    color:#e2e8f0;
+
+}
+
+
+.dark-mode header,
+.dark-mode .card,
+.dark-mode .about-card,
+.dark-mode .contact-card,
+.dark-mode .skills span,
+.dark-mode .research span{
+
+    background:#0f172a;
+    color:white;
+}
+
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3{
+
+    color:white;
+
+}
+
+
+.dark-mode p{
+
+    color:#cbd5e1;
+
+}
+
+
+.theme-btn{
+
+    border:none;
+    background:none;
+    font-size:1.3rem;
+    cursor:pointer;
+
+}

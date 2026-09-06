@@ -20,25 +20,36 @@ if (footer) {
 const menuBtn = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".nav-links");
 
-menuBtn.addEventListener("click", () => {
+if (menuBtn && navLinks) {
 
-    navLinks.classList.toggle("active");
+    menuBtn.addEventListener("click", function () {
 
-    const icon = menuBtn.querySelector("i");
+        navLinks.classList.toggle("active");
 
-    if(navLinks.classList.contains("active")){
+        const icon = menuBtn.querySelector("i");
 
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-xmark");
+        if (navLinks.classList.contains("active")) {
+            icon.className = "fa-solid fa-xmark";
+        } else {
+            icon.className = "fa-solid fa-bars";
+        }
 
-    }else{
+    });
 
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
+    // Close menu after clicking a link
+    document.querySelectorAll(".nav-links a").forEach(link => {
 
-    }
+        link.addEventListener("click", () => {
 
-});
+            navLinks.classList.remove("active");
+
+            menuBtn.querySelector("i").className = "fa-solid fa-bars";
+
+        });
+
+    });
+
+}
 
 
 // =============================

@@ -17,18 +17,28 @@ if (footer) {
 // Mobile Menu Toggle
 // =============================
 
-const nav = document.querySelector("nav ul");
-const menuButton = document.querySelector(".menu-btn");
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
 
-if (menuButton) {
+menuBtn.addEventListener("click", () => {
 
-    menuButton.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
 
-        nav.classList.toggle("active");
+    const icon = menuBtn.querySelector("i");
 
-    });
+    if(navLinks.classList.contains("active")){
 
-}
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+
+    }else{
+
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+
+    }
+
+});
 
 
 // =============================
